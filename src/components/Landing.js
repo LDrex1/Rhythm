@@ -1,7 +1,12 @@
 import React from "react";
+import Navigation from "./Navigation";
 
 function Landing() {
-  return <div>Landing</div>;
+  return (
+    <>
+      <Navigation />
+    </>
+  );
 }
 
 export default Landing;

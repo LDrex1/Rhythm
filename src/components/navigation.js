@@ -1,12 +1,12 @@
 import React from "react";
-import Toolbar from "@mui/material";
-import Link from "@mui/material";
+import Toolbar from "@mui/material/Toolbar";
+import Link from "@mui/material/Link";
 import NavLinks from "./NavLinks";
 
-function navigation() {
+function Navigation() {
   return (
     <>
-      <Toolbar>
+      <Toolbar component="nav" sx={{ justifyContent: "space-between" }}>
         {NavLinks.map((link) => (
           <Link key={link.title} color="inherit" noWrap href={link.url}>
             {link.title}
@@ -17,4 +17,4 @@ function navigation() {
   );
 }
 
-export default navigation;
+export default Navigation;
