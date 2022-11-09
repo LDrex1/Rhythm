@@ -1,5 +1,6 @@
 import React from "react";
 import Aside from "./aside/Aside";
+import LeftContent from "./mainContent/LeftContent";
 import Navigation from "./navigation/Navigation";
 
 function Landing() {
@@ -7,6 +8,7 @@ function Landing() {
     <>
       <Navigation />
       <Aside />
+      <LeftContent />
     </>
   );
 }
