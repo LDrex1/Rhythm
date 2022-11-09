@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Divider, List, ListItem } from "@mui/material";
+import { Divider, List, ListItem } from "@mui/material";
 import { ListItemButton, ListItemIcon, ListItemText, Box } from "@mui/material";
 import { Facebook, Instagram, Twitter, YouTube } from "@mui/icons-material";
 import styleAside from "../style/StyleAside";
@@ -23,7 +23,7 @@ const ListBox = () => (
                 <ListItemText primary={label} sx={styleAside.itemButton} />
               </ListItemButton>
             </ListItem>
-            {index != asideLinks.length - 1 ? (
+            {index !== asideLinks.length - 1 ? (
               <Divider
                 sx={{
                   background: "#ffffff",
