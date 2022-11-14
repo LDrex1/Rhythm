@@ -11,7 +11,7 @@ function Navigation() {
       <IconButton></IconButton>
       <Toolbar component="nav" sx={styleNav.toolbar}>
         {NavLinks.map((link) => (
-          <Link key={link.title} color="inherit" noWrap href={link.url}>
+          <Link key={link.title} sx={styleNav.link} noWrap href={link.url}>
             {link.title}
           </Link>
         ))}
