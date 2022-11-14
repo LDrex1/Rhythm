@@ -1,16 +1,15 @@
-import { Box } from "@mui/material";
 import React from "react";
+import { Box } from "@mui/material";
 import Aside from "./aside/Aside";
-import LeftContent from "./mainContent/LeftContent";
+import Main from "./mainContent/Main";
 import Navigation from "./navigation/Navigation";
-import style from "./style/Style";
 
 function Landing() {
   return (
     <Box>
       <Navigation />
       <Aside />
-      <LeftContent />
+      <Main />
     </Box>
   );
 }
