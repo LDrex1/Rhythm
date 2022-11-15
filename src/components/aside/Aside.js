@@ -17,7 +17,9 @@ function Aside() {
   };
   return (
     <>
-      <Button onClick={toggleDrawer(true)}>Swipe</Button>
+      <Button onClick={toggleDrawer(true)} sx={{ textTransform: "none" }}>
+        Contact
+      </Button>
       <SwipeableDrawer
         sx={styleAside.swiper}
         anchor={"left"}
