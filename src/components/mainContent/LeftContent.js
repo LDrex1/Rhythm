@@ -9,7 +9,6 @@ function LeftContent() {
         Welcome to the 3d world
       </Typography>
     </Grid>
-    // <Grid item md={6} sx={{ background: "yellow" }}></Grid>
   );
 }
 
