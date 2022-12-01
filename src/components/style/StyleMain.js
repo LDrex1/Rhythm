@@ -4,6 +4,8 @@ const styleMain = {
   rightContent: {
     minHeight: { md: "50vh", lg: "70vh" },
     border: "1px solid #222222",
+    borderRadius: "15px",
+    // boxShadow: "5px 4px 3px #ffff45",
   },
 };
 
