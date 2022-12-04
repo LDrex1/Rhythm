@@ -1,5 +1,8 @@
 const styleMain = {
-  leftContent: { header: { color: "#222245", textTransform: "uppercase" } },
+  leftContent: {
+    grid: { zIndex: "1" },
+    header: { color: "#222245", textTransform: "uppercase" },
+  },
   model: { minHeight: { md: "50vh", lg: "70vh" } },
   rightContent: {
     minHeight: { md: "50vh", lg: "70vh" },
