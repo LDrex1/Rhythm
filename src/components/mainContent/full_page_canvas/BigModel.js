@@ -6,7 +6,7 @@ import Balls from "./Balls";
 
 function BigModel() {
   return (
-    <Box sx={{ position: "absolute", height: "100vh", width: "100%" }}>
+    <Box sx={{ position: "fixed", top: "0", left: "0" }}>
       <Canvas>
         <Balls />
         <ambientLight color={"#ffffff"} />
