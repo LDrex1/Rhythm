@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import DatGui, { DatBoolean, DatColor, DatSelect } from "react-dat-gui";
+import React from "react";
+import DatGui, { DatBoolean, DatColor } from "react-dat-gui";
 import "../../../node_modules/react-dat-gui/dist/index.css";
 
 function DatGu({ datData, setDatData }) {
