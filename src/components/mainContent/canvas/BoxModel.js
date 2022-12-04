@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { DoubleSide, Shape, Vector3 } from "three";
 
@@ -10,7 +10,6 @@ function BoxModel() {
   const HeartShape = () => {
     const x = 0,
       y = 0;
-
     const heartpaths = new Shape();
 
     heartpaths.moveTo(x + 5, y + 5);
@@ -56,11 +55,16 @@ function BoxModel() {
     lineRef.current.rotation.y += 0.008;
   });
 
-  const points = [new Vector3(-3, 0, 0), new Vector3(3, 0, 0)];
+  const dg = -3;
+  // const points = [new Vector3(-3, 0, 0), new Vector3(3, 0, 0)];
+  const pointsMemo = useMemo(
+    () => [new Vector3(dg, 0, 0), new Vector3(3, 0, 0)],
+    [dg]
+  );
 
   useLayoutEffect(() => {
-    lineRef.current.geometry.setFromPoints(points);
-  }, [points]);
+    lineRef.current.geometry.setFromPoints(pointsMemo);
+  }, [pointsMemo]);
   return (
     <>
       <HeartShape />
