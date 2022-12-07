@@ -2,13 +2,14 @@ import React from "react";
 import Ball from "./Ball";
 
 function Balls() {
-  const sphereRadius = () => Math.random() * 0.8;
+  const sphereRadius = () => Math.random() * 0.5;
   const spherePosition = () => [
-    ~~(-6 + Math.random() * 9),
+    ~~(-10 + Math.random() * 20),
     ~~(-5 + Math.random() * 10),
-    ~~(-3 + Math.random() * 8),
+    ~~(-9 + Math.random() * 18),
   ];
-  const ballsArray = Array(15).fill(0);
+  const ballsArray = new Array(100).fill(0);
+  console.log(ballsArray);
   return ballsArray.map((each) => (
     <Ball ballRadius={sphereRadius()} ballPosition={spherePosition()} />
   ));
