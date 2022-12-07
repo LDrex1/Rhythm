@@ -70,6 +70,7 @@ function BoxModel() {
       <HeartShape />
       <line ref={lineRef}>
         <bufferGeometry />
+
         <lineBasicMaterial color="black" />
       </line>
       <mesh position={genPosition} ref={meshRef} castShadow>
