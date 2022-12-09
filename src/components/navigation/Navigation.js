@@ -1,21 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import Toolbar from "@mui/material/Toolbar";
 import Link from "@mui/material/Link";
 import NavLinks from "./NavLinks";
-import { Box, IconButton } from "@mui/material";
-import { styleNav } from "../style/StyleNav";
+import { AppBar, Box, IconButton, Stack, Typography } from "@mui/material";
+import { Menu, ViewInAr } from "@mui/icons-material";
+import DrawerNav from "./DrawerNav";
+import LinkList from "./LinkList";
 
 function Navigation() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
-    <Box sx={styleNav.box}>
-      <IconButton></IconButton>
-      <Toolbar component="nav" sx={styleNav.toolbar}>
-        {NavLinks.map((link) => (
-          <Link key={link.title} sx={styleNav.link} noWrap href={link.url}>
-            {link.title}
-          </Link>
-        ))}
-      </Toolbar>
+    <Box>
+      <AppBar
+        position={"static"}
+        sx={{ background: "none", boxShadow: "unset" }}
+      >
+        <Toolbar component="nav">
+          <IconButton
+            onClick={setMobileOpen}
+            sx={{ mr: { xs: "auto", md: 2 }, display: { md: "none" } }}
+            edge="start"
+          >
+            <Menu />
+          </IconButton>
+          <IconButton arial-label={"logo"}>
+            <ViewInAr sx={{ fontSize: 40 }} />
+          </IconButton>
+          <Typography
+            variant={"h6"}
+            component={"div"}
+            sx={{ flexGrow: { md: 1 } }}
+          >
+            3D
+          </Typography>
+          <Stack
+            sx={{ display: { xs: "none", md: "flex" } }}
+            component={"ul"}
+            direction={"row"}
+            spacing={1}
+          >
+            <LinkList />
+          </Stack>
+        </Toolbar>
+      </AppBar>
+      <DrawerNav mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />
     </Box>
   );
 }
