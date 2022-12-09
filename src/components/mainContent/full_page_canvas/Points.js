@@ -7,7 +7,7 @@ function Points() {
   let yo = -6,
     ts = 0,
     freq = 1,
-    amp = 5;
+    amp = 1;
 
   const graphWave = useCallback(
     (x, y) => {
@@ -37,14 +37,31 @@ function Points() {
 
   console.log(positions);
   let j = 0;
+  let changes = { ts: true, j: true };
   useFrame(() => {
     const positions = bufferAttrRef.current.array;
-    ts += 0.01;
-    j += 0.009;
+    if (changes.ts) {
+      ts += 0.01;
+    } else {
+      if (ts < 4) changes.ts = !changes.ts;
+      ts -= 0.01;
+    }
+    if (ts > 9) {
+      changes.ts = !changes.ts;
+    }
+    if (changes.j) {
+      j += 0.001;
+    } else {
+      if (j < 2) changes.j = !changes.j;
+      j -= 0.001;
+    }
+
+    if (j > 8) changes.j = !changes.j;
+
     amp = 0.3 + 2.2 * Math.sin(j);
     // amp = 1;
-    // freq = 100 * Math.sin(j * 0.0003);
-    freq = 0.01;
+    freq = 10 * Math.sin(j * 0.0003);
+    // freq = 0.05;
     let i = 0;
     for (let xi = 0; xi < count; xi += step) {
       for (let zi = 0; zi < count; zi += step) {
