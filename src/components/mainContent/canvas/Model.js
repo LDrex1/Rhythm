@@ -30,9 +30,7 @@ function Model() {
         <Surround />
         <PlaneA />
       </Canvas>
-      <div style={{ position: "static", marginTop: "20px" }}>
-        <DatGu datData={datData} setDatData={setDatData} />
-      </div>
+      <DatGu datData={datData} setDatData={setDatData} />
     </>
   );
 }
