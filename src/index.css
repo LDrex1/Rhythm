@@ -21,3 +21,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.gui {
+  position: absolute;
+  margin-top: 20px;
+}
