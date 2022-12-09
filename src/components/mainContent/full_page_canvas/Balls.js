@@ -2,7 +2,7 @@ import React from "react";
 import Ball from "./Ball";
 
 function Balls() {
-  const sphereRadius = () => Math.random() * 0.5;
+  const sphereRadius = () => Math.random() * 0.2;
   const spherePosition = () => [
     ~~(-10 + Math.random() * 20),
     ~~(-5 + Math.random() * 10),
