@@ -15,7 +15,7 @@ function Ball({ ballRadius, ballPosition }) {
   return (
     <mesh ref={sphereRef} position={new Vector3(...ballPosition)}>
       <sphereBufferGeometry args={[ballRadius, 35, 35]} />
-      <meshStandardMaterial metalness={0.2} roughness={0.4} color={"skyblue"} />
+      <meshStandardMaterial metalness={0.2} roughness={0.4} color={"#999999"} />
     </mesh>
   );
 }
