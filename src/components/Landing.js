@@ -9,15 +9,15 @@ import CustomThemeProvider from "./customThemes/CustomThemeProvider";
 
 function Landing() {
   return (
-    <>
+    <Box sx={{ position: "relative", minHeight: "100vh" }}>
       <BigModel />
-      <Box>
+      <Box className="page" sx={{ mb: 3 }}>
         <Navigation />
         <Aside />
         <Main />
       </Box>
       <Footer />
-    </>
+    </Box>
   );
 }
 
