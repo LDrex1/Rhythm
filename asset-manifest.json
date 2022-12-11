@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/rhythm/static/css/main.df75b184.css",
+    "main.js": "/rhythm/static/js/main.4c15ec08.js",
+    "index.html": "/rhythm/index.html",
+    "main.df75b184.css.map": "/rhythm/static/css/main.df75b184.css.map",
+    "main.4c15ec08.js.map": "/rhythm/static/js/main.4c15ec08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df75b184.css",
+    "static/js/main.4c15ec08.js"
+  ]
+}
