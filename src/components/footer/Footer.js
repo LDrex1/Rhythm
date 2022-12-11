@@ -5,10 +5,10 @@ function Footer() {
   return (
     <Box
       sx={{
-        position: "static",
+        position: "absolute",
         width: "100%",
         bottom: "4px",
-        top: "auto",
+        // top: "auto",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
