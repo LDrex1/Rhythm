@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Toolbar from "@mui/material/Toolbar";
-import Link from "@mui/material/Link";
-import NavLinks from "./NavLinks";
 import { AppBar, Box, IconButton, Stack, Typography } from "@mui/material";
 import { Menu, ViewInAr } from "@mui/icons-material";
 import DrawerNav from "./DrawerNav";
