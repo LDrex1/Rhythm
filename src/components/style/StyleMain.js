@@ -1,6 +1,6 @@
 const styleMain = {
   leftContent: {
-    grid: { zIndex: "1" },
+    grid: { zIndex: "1", textAlign: "center", transition: "all 0.5s ease-out" },
     header: {
       marginBottom: { xs: 4, md: 0 },
       color: "#222245",
