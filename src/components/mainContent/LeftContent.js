@@ -9,7 +9,7 @@ function LeftContent({ showCanvas, setShowCanvas }) {
   };
 
   return (
-    <Grid item md={showCanvas ? 6 : 12} sx={styleMain.leftContent.grid}>
+    <Grid item xs={12} md={showCanvas ? 6 : 12} sx={styleMain.leftContent.grid}>
       <CustomThemeProvider>
         <Typography
           component="h1"
