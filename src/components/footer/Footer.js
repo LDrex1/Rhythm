@@ -7,8 +7,7 @@ function Footer() {
       sx={{
         position: "absolute",
         width: "100%",
-        bottom: "4px",
-        // top: "auto",
+        bottom: "3px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
