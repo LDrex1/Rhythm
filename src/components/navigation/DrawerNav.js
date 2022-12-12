@@ -29,7 +29,6 @@ function DrawerNav(props) {
             boxSizing: "border-box",
             justifyContent: "center",
             width: drawerWidth,
-            background: "none",
             boxShadow: "none",
             height: "60vh",
             background: "#222222",
