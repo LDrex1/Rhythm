@@ -9,9 +9,9 @@ import CustomThemeProvider from "./customThemes/CustomThemeProvider";
 
 function Landing() {
   return (
-    <Box sx={{ position: "relative", minHeight: "100vh" }}>
+    <Box sx={{ position: "static", minHeight: "100vh" }}>
       <BigModel />
-      <Box className="page" sx={{ mb: 3 }}>
+      <Box className="page">
         <Navigation />
         <Aside />
         <Main />
