@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Drawer, List, Stack } from "@mui/material";
 import LinkList from "./LinkList";
-import { Center } from "@react-three/drei";
 
 function DrawerNav(props) {
   const drawerWidth = 150;
@@ -14,22 +13,6 @@ function DrawerNav(props) {
     window !== undefined ? document.querySelector(".page") : undefined;
   console.log(container);
 
-  // const useStyles = makeStyles({
-  //   drawer: {
-  //     position: "relative",
-  //     marginLeft: "auto",
-  //     width: 200,
-  //     "& .MuiBackdrop-root": {
-  //       display: "none",
-  //     },
-  //     "& .MuiDrawer-paper": {
-  //       width: 200,
-  //       position: "absolute",
-  //       height: "80vh",
-  //       transition: "none !important",
-  //     },
-  //   },
-  // });
   return (
     <Box component={"nav"} sx={{ display: "flex", alignItems: "center" }}>
       <Drawer
