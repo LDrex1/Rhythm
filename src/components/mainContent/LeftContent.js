@@ -1,11 +1,15 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import styleMain from "../style/StyleMain";
 import CustomThemeProvider from "../customThemes/CustomThemeProvider";
 
-function LeftContent() {
+function LeftContent({ showCanvas, setShowCanvas }) {
+  const handleClick = () => {
+    setShowCanvas((prevState) => !prevState);
+  };
+
   return (
-    <Grid item md={6} sx={styleMain.leftContent.grid}>
+    <Grid item md={showCanvas ? 6 : 12} sx={styleMain.leftContent.grid}>
       <CustomThemeProvider>
         <Typography
           component="h1"
@@ -16,6 +20,13 @@ function LeftContent() {
         >
           Welcome to the 3d world
         </Typography>
+        <Button
+          variant={"contained"}
+          sx={{ color: "inherit", textAlign: "center", mt: 2 }}
+          onClick={handleClick}
+        >
+          {showCanvas ? "Hide Canvas" : "Show Canvas"}
+        </Button>
       </CustomThemeProvider>
     </Grid>
   );
