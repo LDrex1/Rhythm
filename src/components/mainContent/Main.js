@@ -4,7 +4,7 @@ import LeftContent from "./LeftContent";
 import RightContent from "./RightContent";
 
 function Main() {
-  const [showCanvas, setShowCanvas] = useState(true);
+  const [showCanvas, setShowCanvas] = useState(false);
 
   return (
     <Container
