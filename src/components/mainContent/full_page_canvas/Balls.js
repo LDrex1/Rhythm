@@ -10,8 +10,12 @@ function Balls() {
   ];
   const ballsArray = new Array(100).fill(0);
   console.log(ballsArray);
-  return ballsArray.map((each) => (
-    <Ball ballRadius={sphereRadius()} ballPosition={spherePosition()} />
+  return ballsArray.map((ball, index) => (
+    <Ball
+      key={index}
+      ballRadius={sphereRadius()}
+      ballPosition={spherePosition()}
+    />
   ));
 }
 
