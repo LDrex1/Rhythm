@@ -15,6 +15,7 @@ function Aside() {
     }
     setAnchor(open);
   };
+
   return (
     <>
       <Button onClick={toggleDrawer(true)} sx={{ textTransform: "none" }}>
@@ -22,7 +23,7 @@ function Aside() {
       </Button>
       <SwipeableDrawer
         sx={styleAside.swiper}
-        anchor={"left"}
+        anchor={"right"}
         hideBackdrop={true}
         open={anchor}
         onClick={toggleDrawer(false)}
