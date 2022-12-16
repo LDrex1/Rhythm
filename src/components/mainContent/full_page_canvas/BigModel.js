@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { OrbitControls } from "@react-three/drei";
+import { CameraShake, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Balls from "./Balls";
 import Points from "./Points";
@@ -26,6 +26,14 @@ function BigModel() {
           autoRotateSpeed={0.6}
         />
         <axesHelper args={[4]} />
+        <CameraShake
+          maxPitch={0.015}
+          maxYaw={0.01}
+          maxRoll={0.018}
+          pitchFrequency={0.1}
+          yawFrequency={0.09}
+          rollFrequency={0.06}
+        />
       </Canvas>
     </Box>
   );
