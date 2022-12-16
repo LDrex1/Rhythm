@@ -17,6 +17,7 @@ const styleMain = {
     border: "1px solid #222222",
     borderRadius: "15px",
     overflow: "hidden",
+    mt: { xs: 3, md: 0 },
     // boxShadow: "5px 4px 3px #ffff45",
   },
 };
