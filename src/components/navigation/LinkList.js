@@ -12,7 +12,7 @@ function LinkList() {
   return (
     <>
       {NavLinks.map((link) => (
-        <ListItem key={link.title}>
+        <ListItem sx={styleNav.item} key={link.title}>
           <ListItemButton sx={styleNav.link} href={link.url}>
             <ListItemIcon sx={{ color: "whitesmoke", minWidth: "35px" }}>
               {link.icon}
