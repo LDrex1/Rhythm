@@ -5,11 +5,12 @@ import Main from "./mainContent/Main";
 import Navigation from "./navigation/Navigation";
 import Footer from "./footer/Footer";
 import LoadingHome from "./loadingPages/LoadingHome";
+import BigModel from "./mainContent/full_page_canvas/BigModel";
 
 function Landing() {
-  const BigModel = lazy(() =>
-    import("./mainContent/full_page_canvas/BigModel")
-  );
+  // const BigModel = lazy(() =>
+  //   import("./mainContent/full_page_canvas/BigModel")
+  // );
   return (
     <Box sx={{ position: "static", minHeight: "100vh" }}>
       <Suspense fallback={<LoadingHome />}>{<BigModel />}</Suspense>
