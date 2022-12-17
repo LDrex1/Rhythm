@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Box, Grid } from "@mui/material";
 import styleMain from "../style/StyleMain";
 import Model from "./canvas/Model";
+import LoadingHome from "../loadingPages/LoadingHome";
 
 function RightContent({ showCanvas }) {
   return (
@@ -15,9 +16,12 @@ function RightContent({ showCanvas }) {
         transition: { md: "all 0.5s ease-out", xs: "all 0.5s ease-out" },
       }}
     >
-      <Box sx={styleMain.rightContent}>
-        <Model />
-      </Box>
+      {" "}
+      <Suspense fallback={<LoadingHome />}>
+        <Box sx={styleMain.rightContent}>
+          <Model />
+        </Box>
+      </Suspense>
     </Grid>
   );
 }
