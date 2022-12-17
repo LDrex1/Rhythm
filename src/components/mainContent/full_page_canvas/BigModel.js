@@ -14,6 +14,7 @@ function BigModel() {
         left: "0",
         height: "100%",
         width: "100%",
+        pointerEvents: "none",
       }}
     >
       <Canvas>
@@ -21,9 +22,9 @@ function BigModel() {
         <Balls />
         <ambientLight intensity={1} color={"#ffffff"} />
         <OrbitControls
-          enableRotate={true}
-          autoRotate={false}
-          autoRotateSpeed={0.6}
+          enableRotate={false}
+          autoRotate={true}
+          autoRotateSpeed={0.2}
         />
         <axesHelper args={[4]} />
         <CameraShake
